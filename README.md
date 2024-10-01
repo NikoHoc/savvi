@@ -7,7 +7,7 @@ npm i -D daisyui@latest
 
 in tailwind.config.js, add require('daisyui') in plugins <br />
   plugins: [
-    require('daisyui'),
+    require('daisyui')
   ],
 
 
