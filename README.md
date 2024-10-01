@@ -1,5 +1,5 @@
 # Setup Tailwind
-npm install -D tailwindcss
+npm install -D tailwindcss__
 npx tailwindcss init
 
 # Setup DaisyUI
