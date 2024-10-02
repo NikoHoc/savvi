@@ -4,13 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css"
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      
+    </style>
+
   </head>
   <body>
+    <!-- App Bar -->
     <div class="rounded-b-lg shadow-lg flex justify-center">
-      <img src="image/savvi.png" class="h-16 w-auto" alt="">
+      <img src="image/savvi.png" class="h-16 w-auto" alt="" />
     </div>
 
+    <section class="ms-4 me-4">
+      <div class="flex items-center justify-center mt-6">
+        <div class="bg-white rounded-lg shadow p-6 w-80">
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <p class="text-gray-500">Total Balance</p>
+              <p class="text-2xl font-semibold">Rp. 1.000.000</p>
+            </div>
+            <div class="bg-blue-100 rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-black h-5 w-5" viewBox="0 0 256 256">
+                <path
+                  fill="currentColor"
+                  d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <progress class="progress progress-success w-56 mb-4" value="70" max="100"></progress>
+          <div class="flex items-center text-green-500">
+            <p class="text-sm font-semibold">+ 2.9%</p>
+            <p class="text-sm text-gray-500 ml-2">More saving than last month</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center p-2">
+        <Button class="btn btn-primary text-primary-content">Add Money</Button>
+      </div>
+    </section>
+
+    
+
+    <!-- Bottom Bar -->
     <div class="btm-nav">
       <button class="text-accent active">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 32 32">
