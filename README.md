@@ -9,25 +9,24 @@ Currently in development, Savvi is set to redefine your financial journey.
 
 # Setup Tailwind
 <ol>
-<li>```npm install -D tailwindcss```</li>
-<li>```npx tailwindcss init```</li>
+<li>npm install -D tailwindcss</li>
+<li>npx tailwindcss init</li>
 </ol>
 
 # Setup DaisyUI
 <ol>
-<li>```npm i -D daisyui@latest```</li>
+<li>npm i -D daisyui@latest</li>
 <li>in tailwind.config.js, add require('daisyui') in plugins <br />
-```
   plugins: [
     require('daisyui')
   ],
-```</li>
+</li>
 </ol>
 
 # Run Project
 <ol>
 <li>npm run build</li>
-<li>go to server directory and run, ``` node server.js```</li>
+<li>go to server directory and run,  node server.js</li>
 </ol>
 
 
