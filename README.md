@@ -29,5 +29,7 @@ Currently in development, Savvi is set to redefine your financial journey.
 <li>go to server directory and run,  node server.js</li>
 </ol>
 
+# Our Motivation
+<img src="https://static.telepedia.net/newqualitipediawiki/c/cc/Skibidi_toilet_screenshot.webp.png">
 
 
