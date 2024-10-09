@@ -11,18 +11,31 @@ Currently in development, Savvi is set to redefine your financial journey.
 # Setup Tailwind
 
 <ol>
-<li>npm install -D tailwindcss</li>
-<li>npx tailwindcss init</li>
+<li>
+  ```bash
+  npm install -D tailwindcss
+  npx tailwindcss init
+  ```
+  </li>
 </ol>
 
 # Setup DaisyUI
 
 <ol>
-<li>npm i -D daisyui@latest</li>
+<li>
+  ```bash
+  npm i -D daisyui@latest
+  ```
+</li>
 <li>in tailwind.config.js, add require('daisyui') in plugins <br />
-  plugins: [
-    require('daisyui')
-  ],
+  ```javascript
+  module.exports = {
+    //...
+    plugins: [
+      require('daisyui'),
+    ],
+  }
+  ```
 </li>
 </ol>
 
@@ -30,8 +43,16 @@ Currently in development, Savvi is set to redefine your financial journey.
 
 <ol>
 <li>npm run build</li>
-<li>go to server directory and run,  node server.js</li>
-<li>go to server directory and run,  nodemon live.js</li>
+<li>go to server directory and run, 
+  ```bash
+  node server.js
+  ```
+</li>
+<li>go to server directory and run,  
+  ```bash
+  nodemon live.js
+  ```
+</li>
 </ol>
 
 # Gemini
