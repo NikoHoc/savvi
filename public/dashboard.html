@@ -6,41 +6,167 @@
     <title>Savvi</title>
     <link rel="stylesheet" href="css/style.css" />
 
-    <style></style>
+    <style>
+      #scroll-section {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+      }
+
+    </style>
   </head>
   <body>
     <!-- App Bar -->
-    <div class="rounded-b-lg shadow-lg flex justify-center">
-      <img src="image/savvi.png" class="h-16 w-auto" alt="" />
+    <div class="rounded-b-lg shadow-lg flex justify-between items-center px-6">
+      <img src="image/savvi.png" class="h-12 w-auto" alt="" />
+      <svg xmlns="http://www.w3.org/2000/svg" class="text-black h-7 w-7" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+          <path
+            d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+          />
+          <path
+            fill="currentColor"
+            d="M5 9a7 7 0 0 1 14 0v3.764l1.822 3.644A1.1 1.1 0 0 1 19.838 18h-3.964a4.002 4.002 0 0 1-7.748 0H4.162a1.1 1.1 0 0 1-.984-1.592L5 12.764zm5.268 9a2 2 0 0 0 3.464 0zM12 4a5 5 0 0 0-5 5v3.764a2 2 0 0 1-.211.894L5.619 16h12.763l-1.17-2.342a2 2 0 0 1-.212-.894V9a5 5 0 0 0-5-5"
+          />
+        </g>
+      </svg>
     </div>
 
-    <section class="ms-4 me-4">
-      <div class="flex items-center justify-center mt-6">
-        <div class="bg-white rounded-lg shadow p-6 w-80">
+    <section id="total-balance" class="mt-4 px-4">
+      <div class="flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-screen-md">
           <div class="flex justify-between items-center mb-4">
             <div>
-              <p class="text-gray-500">Total Balance</p>
-              <p class="text-2xl font-semibold">Rp. 1.000.000</p>
+              <p class="text-gray-500">Nilai Portfolio</p>
+              <p class="text-2xl font-semibold">Rp 150.000</p>
             </div>
-            <div class="bg-blue-100 rounded-full p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-black h-5 w-5" viewBox="0 0 256 256">
+            <div class="rounded-full p-2 bg-green-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-green-600 h-8 w-8" viewBox="0 0 32 32">
+                <path fill="currentColor" d="M16.5 14H20v-2h-2v-1h-2v1.05a2.5 2.5 0 0 0 .5 4.95h1a.5.5 0 0 1 0 1H14v2h2v1h2v-1.05a2.5 2.5 0 0 0-.5-4.95h-1a.5.5 0 0 1 0-1" />
+                <path
+                  fill="currentColor"
+                  d="M29 13h-2.02A5.78 5.78 0 0 0 25 8.852V5a1 1 0 0 0-1.6-.8L19.667 7H15c-5.51 0-9.463 3.241-9.948 8H5a1 1 0 0 1-1-1v-2H2v2a3.003 3.003 0 0 0 3 3h.07A9.17 9.17 0 0 0 9 23.557V27a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2h3v2a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3.363A5.1 5.1 0 0 0 26.819 20H29a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1m-1 5h-2.876c-.305 2.753-.823 3.485-3.124 4.315V26h-2v-3h-7v3h-2v-3.622A7.01 7.01 0 0 1 7 16c0-4.835 4.018-7 8-7h5.334L23 7v2.776c2.418 1.86 1.913 3.186 2.018 5.224H28Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="column">
+              <p class="text-sm text-gray-500">Dana Darurat:</p>
+              <p class="text-black font-semibold">Rp 50.000</p>
+            </div>
+
+            <div class="column text-right">
+              <p class="text-sm text-gray-500">Jangka Panjang:</p>
+              <p class="text-black font-semibold">Rp 50.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journal-card" class="mt-6 px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold">Journal</h2>
+        <a href="" class="text-primary text-sm font-semibold">Tambah Baru</a>
+      </div>
+
+      <div id="scroll-section" class="flex overflow-x-auto space-x-4 py-2">
+        <!-- Card 1 -->
+        <div class="scroll-item bg-white border-2 rounded-lg shadow-xl p-4 w-64 flex-shrink-0">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-500 rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
                   d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
                 />
               </svg>
             </div>
+            <div class="ms-2">
+              <p class="text-black font-semibold text-lg">Dana Tabungan</p>
+            </div>
           </div>
-          <progress class="progress progress-success w-56 mb-4" value="70" max="100"></progress>
-          <div class="flex items-center text-green-500">
-            <p class="text-sm font-semibold">+ 2.9%</p>
-            <p class="text-sm text-gray-500 ml-2">More saving than last month</p>
+
+          <div class="flex items-center justify-between">
+            <div class="column">
+              <p class="font-semibold">Nilai:</p>
+              <p class="text-sm">Rp 50.000</p>
+            </div>
+
+            <div class="column text-right">
+              <p class="font-semibold">Keuntungan:</p>
+              <p class="text-sm">Rp 50.000</p>
+            </div>
+          </div>
+          <div class="grid items-center justify-items-stretch mt-2">
+            <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
           </div>
         </div>
-      </div>
 
-      <div class="flex justify-center p-2">
-        <button class="btn btn-primary text-primary-content">Add Money</button>
+        <!-- Card 1 -->
+        <div class="scroll-item bg-white border-2 rounded-lg shadow-xl p-4 w-64 flex-shrink-0">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-500 rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                <path
+                  fill="currentColor"
+                  d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                />
+              </svg>
+            </div>
+            <div class="ms-2">
+              <p class="text-black font-semibold text-lg">Dana Darurat</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="column">
+              <p class="font-semibold">Nilai:</p>
+              <p class="text-sm">Rp 50.000</p>
+            </div>
+
+            <div class="column text-right">
+              <p class="font-semibold">Pengeluaran:</p>
+              <p class="text-sm">Rp 50.000</p>
+            </div>
+          </div>
+          <div class="grid items-center justify-items-stretch mt-2">
+            <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="scroll-item bg-white border-2 rounded-lg shadow-xl p-4 w-64 flex-shrink-0">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-500 rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                <path
+                  fill="currentColor"
+                  d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                />
+              </svg>
+            </div>
+            <div class="ms-2">
+              <p class="text-black font-semibold text-lg">Jangka Panjang</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="column">
+              <p class="font-semibold">Nilai:</p>
+              <p class="text-sm">Rp 50.000</p>
+            </div>
+
+            <div class="column text-right">
+              <p class="font-semibold">Goal:</p>
+              <p class="text-sm">Rp 50.000</p>
+            </div>
+          </div>
+          <div class="grid items-center justify-items-stretch mt-2">
+            <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -72,5 +198,7 @@
         </svg>
       </a>
     </div>
+    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
   </body>
 </html>
