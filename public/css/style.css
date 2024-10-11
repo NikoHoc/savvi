@@ -1002,43 +1002,6 @@ html{
   }
 }
 
-.footer{
-  display: grid;
-  width: 100%;
-  grid-auto-flow: row;
-  place-items: start;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  row-gap: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.footer > *{
-  display: grid;
-  place-items: start;
-  gap: 0.5rem;
-}
-
-.footer-center{
-  place-items: center;
-  text-align: center;
-}
-
-.footer-center > *{
-  place-items: center;
-}
-
-@media (min-width: 48rem){
-  .footer{
-    grid-auto-flow: column;
-  }
-
-  .footer-center{
-    grid-auto-flow: row dense;
-  }
-}
-
 .input{
   flex-shrink: 1;
   -webkit-appearance: none;
@@ -1690,6 +1653,10 @@ html{
   margin-left: 0.5rem;
 }
 
+.ms-1{
+  margin-inline-start: 0.25rem;
+}
+
 .ms-2{
   margin-inline-start: 0.5rem;
 }
@@ -1710,16 +1677,8 @@ html{
   margin-top: 1.5rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
-}
-
-.ms-1{
-  margin-inline-start: 0.25rem;
-}
-
-.inline-block{
-  display: inline-block;
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .flex{
@@ -1758,6 +1717,10 @@ html{
   height: auto;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .w-32{
   width: 8rem;
 }
@@ -1788,10 +1751,6 @@ html{
 
 .w-screen{
   width: 100vw;
-}
-
-.grid-flow-col{
-  grid-auto-flow: column;
 }
 
 .grid-cols-12{
@@ -1858,10 +1817,6 @@ html{
   border-radius: 0.5rem;
 }
 
-.rounded-xl{
-  border-radius: 0.75rem;
-}
-
 .rounded-b-3xl{
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -1870,11 +1825,6 @@ html{
 .rounded-b-lg{
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-}
-
-.rounded-t-3xl{
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
 }
 
 .border{
@@ -1909,11 +1859,6 @@ html{
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-content{
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-nc,oklch(var(--nc)/var(--tw-bg-opacity)));
-}
-
 .bg-orange-500{
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
@@ -1929,30 +1874,12 @@ html{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-warning{
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-wa,oklch(var(--wa)/var(--tw-bg-opacity)));
-}
-
-.bg-secondary{
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
-}
-
-.fill-current{
-  fill: currentColor;
-}
-
 .p-2{
   padding: 0.5rem;
 }
 
 .p-6{
   padding: 1.5rem;
-}
-
-.p-10{
-  padding: 2.5rem;
 }
 
 .pb-24{
@@ -2060,33 +1987,6 @@ html{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-xl{
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-primary{
-  --tw-shadow-color: var(--fallback-p,oklch(var(--p)/1));
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-secondary{
-  --tw-shadow-color: var(--fallback-s,oklch(var(--s)/1));
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-neutral{
-  --tw-shadow-color: var(--fallback-n,oklch(var(--n)/1));
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .shadow-neutral-content{
   --tw-shadow-color: var(--fallback-nc,oklch(var(--nc)/1));
   --tw-shadow: var(--tw-shadow-colored);
@@ -2098,16 +1998,6 @@ html{
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.ring-primary{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: var(--fallback-p,oklch(var(--p)/var(--tw-ring-opacity)));
-}
-
-.ring-gray-800{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity));
-}
-
 .ring-neutral{
   --tw-ring-opacity: 1;
   --tw-ring-color: var(--fallback-n,oklch(var(--n)/var(--tw-ring-opacity)));
@@ -2115,14 +2005,6 @@ html{
 
 .ring-offset-2{
   --tw-ring-offset-width: 2px;
-}
-
-.ring-offset-secondary{
-  --tw-ring-offset-color: var(--fallback-s,oklch(var(--s)/1));
-}
-
-.ring-offset-gray-800{
-  --tw-ring-offset-color: #1f2937;
 }
 
 .ring-offset-primary{
@@ -2152,5 +2034,9 @@ html{
 
   .md\:col-span-11{
     grid-column: span 11 / span 11;
+  }
+
+  .md\:w-3\/4{
+    width: 75%;
   }
 }
