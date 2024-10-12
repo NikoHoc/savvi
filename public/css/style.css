@@ -763,6 +763,11 @@ html{
     --tw-text-opacity: 1;
   }
 
+  .tabs-boxed :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):hover, .tabs-boxed :is(input:checked):hover{
+    --tw-text-opacity: 1;
+    color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  }
+
   .table tr.hover:hover,
   .table tr.hover:nth-child(even):hover{
     --tw-bg-opacity: 1;
@@ -1533,6 +1538,21 @@ html{
 .tab:not(input):empty{
   cursor: default;
   grid-column-start: span 9999;
+}
+
+.tab-content{
+  grid-column-start: 1;
+  grid-column-end: span 9999;
+  grid-row-start: 2;
+  margin-top: calc(var(--tab-border) * -1);
+  display: none;
+  border-color: transparent;
+  border-width: var(--tab-border, 0);
+}
+
+:checked + .tab-content:nth-child(2),
+  :is(.tab-active, [aria-selected="true"]) + .tab-content:nth-child(2){
+  border-start-start-radius: 0px;
 }
 
 input.tab:checked + .tab-content,
@@ -2484,6 +2504,13 @@ details.collapse summary::-webkit-details-marker{
   border-radius: var(--rounded-btn, 0.5rem);
 }
 
+.tabs-boxed :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]), .tabs-boxed :is(input:checked){
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
 .table:where([dir="rtl"], [dir="rtl"] *){
   text-align: right;
 }
@@ -2623,42 +2650,6 @@ details.collapse summary::-webkit-details-marker{
   opacity: 0.3;
   --togglehandleborder: 0 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset,
       var(--handleoffsetcalculator) 0 0 3px var(--fallback-bc,oklch(var(--bc)/1)) inset;
-}
-
-.artboard.phone-1.horizontal,
-      .artboard.phone-1.artboard-horizontal{
-  width: 568px;
-  height: 320px;
-}
-
-.artboard.phone-2.horizontal,
-      .artboard.phone-2.artboard-horizontal{
-  width: 667px;
-  height: 375px;
-}
-
-.artboard.phone-3.horizontal,
-      .artboard.phone-3.artboard-horizontal{
-  width: 736px;
-  height: 414px;
-}
-
-.artboard.phone-4.horizontal,
-      .artboard.phone-4.artboard-horizontal{
-  width: 812px;
-  height: 375px;
-}
-
-.artboard.phone-5.horizontal,
-      .artboard.phone-5.artboard-horizontal{
-  width: 896px;
-  height: 414px;
-}
-
-.artboard.phone-6.horizontal,
-      .artboard.phone-6.artboard-horizontal{
-  width: 1024px;
-  height: 320px;
 }
 
 .btm-nav-xs > *:where(.active){
@@ -3238,8 +3229,12 @@ details.collapse summary::-webkit-details-marker{
   margin-top: 1.5rem;
 }
 
-.ml-4{
-  margin-left: 1rem;
+.mt-64{
+  margin-top: 16rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .block{
@@ -3310,10 +3305,6 @@ details.collapse summary::-webkit-details-marker{
   height: auto;
 }
 
-.h-10{
-  height: 2.5rem;
-}
-
 .w-1\/2{
   width: 50%;
 }
@@ -3352,10 +3343,6 @@ details.collapse summary::-webkit-details-marker{
 
 .w-full{
   width: 100%;
-}
-
-.w-12{
-  width: 3rem;
 }
 
 .max-w-screen-md{
@@ -3456,10 +3443,6 @@ details.collapse summary::-webkit-details-marker{
   flex-direction: column;
 }
 
-.flex-wrap{
-  flex-wrap: wrap;
-}
-
 .content-center{
   align-content: center;
 }
@@ -3530,6 +3513,10 @@ details.collapse summary::-webkit-details-marker{
 
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.rounded-box{
+  border-radius: var(--rounded-box, 1rem);
 }
 
 .rounded-b-3xl{
@@ -3603,6 +3590,11 @@ details.collapse summary::-webkit-details-marker{
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-base-300{
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-border-opacity)));
+}
+
 .\!bg-gray-50{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
@@ -3664,6 +3656,11 @@ details.collapse summary::-webkit-details-marker{
 
 .bg-white\/50{
   background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-base-100{
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .p-1{
@@ -3739,6 +3736,10 @@ details.collapse summary::-webkit-details-marker{
 
 .pt-24{
   padding-top: 6rem;
+}
+
+.pt-72{
+  padding-top: 18rem;
 }
 
 .text-center{

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
+      body{
+        margin-bottom: 50vh;
+      }
+
       #scroll-section {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
@@ -32,7 +36,7 @@
       </svg>
     </div>
 
-    <section id="username" class="mt-4 px-4">
+    <section id="username" class="mt-4 px-4 mb-2">
       <div class="items-start">
         <h1 class="font-poppins font-bold text-2xl">Hello, Flying Lemonande</h1>
       </div>
@@ -74,7 +78,7 @@
     <section id="journal-card" class="mt-6 px-4">
       <div class="flex items-center justify-between">
         <h2 class="text-xl font-bold">Journal</h2>
-        <button class="text-primary underline underline-offset-2 text-md font-semibold">Tambah Baru</button>
+        <a href="journal.html" class="text-primary underline underline-offset-2 text-md font-semibold">Lihat Semua</a>
       </div>
 
       <div id="scroll-section" class="flex overflow-x-auto space-x-4 py-2">
@@ -173,36 +177,153 @@
             <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
           </div>
         </div>
+    </section>
 
-        <!-- Card 4 -->
-        <div class="scroll-item bg-white border-2 rounded-lg shadow-xl p-4 w-64 flex-shrink-0">
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-500 rounded-full p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
-                <path
-                  fill="currentColor"
-                  d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
-                />
-              </svg>
+    <section id="journal-2" class="mt-6 px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold">Journal</h2>
+        <a href="journal.html" class="text-primary underline underline-offset-2 text-md font-semibold">Tambah Baru</a>
+      </div>
+
+      <div role="tablist" class="tabs tabs-lifted mt-2">
+        <input type="radio" name="my_tabs_2" role="tab" class="tab font-semibold" aria-label="Essentials" />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+          <div class="bg-white border-2 rounded-lg shadow-xl p-4  w-full max-w-screen-md">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-500 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                  />
+                </svg>
+              </div>
+              <div class="ms-2">
+                <p class="text-black font-semibold text-lg">Dana Darurat</p>
+              </div>
             </div>
-            <div class="ms-2">
-              <p class="text-black font-semibold text-lg">Beli Motor</p>
+
+            <div class="flex items-center justify-between">
+              <div class="column">
+                <p class="font-semibold">Nilai:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+
+              <div class="column text-right">
+                <p class="font-semibold">Pengeluaran:</p>
+                <p class="text-sm">Rp 0</p>
+              </div>
+            </div>
+            <div class="grid items-center justify-items-stretch mt-2">
+              <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
             </div>
           </div>
 
-          <div class="flex items-center justify-between">
-            <div class="column">
-              <p class="font-semibold">Nilai:</p>
-              <p class="text-sm">Rp 50.000</p>
+          <!-- Card 3 -->
+          <div class="bg-white border-2 rounded-lg shadow-xl mt-4 p-4 w-full max-w-screen-md">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-500 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                  />
+                </svg>
+              </div>
+              <div class="ms-2">
+                <p class="text-black font-semibold text-lg">Jangka Panjang</p>
+              </div>
             </div>
 
-            <div class="column text-right">
-              <p class="font-semibold">Goal:</p>
-              <p class="text-sm">Rp 50.000</p>
+            <div class="flex items-center justify-between">
+              <div class="column">
+                <p class="font-semibold">Nilai:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+
+              <div class="column text-right">
+                <p class="font-semibold">Goal:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+            </div>
+            <div class="grid items-center justify-items-stretch mt-2">
+              <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
             </div>
           </div>
-          <div class="grid items-center justify-items-stretch mt-2">
-            <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
+        </div>
+      
+        <input
+          type="radio"
+          name="my_tabs_2"
+          role="tab"
+          class="tab font-semibold"
+          aria-label="Daily"
+          checked="checked" />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+          <!-- Card 1 -->
+          <div class="bg-white border-2 rounded-lg shadow-xl p-4  w-full max-w-screen-md">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-500 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                  />
+                </svg>
+              </div>
+              <div class="ms-2">
+                <p class="text-black font-semibold text-lg">Beli Motor</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="column">
+                <p class="font-semibold">Nilai:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+
+              <div class="column text-right">
+                <p class="font-semibold">Pengeluaran:</p>
+                <p class="text-sm">Rp 0</p>
+              </div>
+            </div>
+            <div class="grid items-center justify-items-stretch mt-2">
+              <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
+            </div>
+          </div>
+        </div>
+      
+        <input type="radio" name="my_tabs_2" role="tab" class="tab font-semibold" aria-label="Goals" />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+          <div class="bg-white border-2 rounded-lg shadow-xl p-4 w-full max-w-screen-md">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-500 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                  />
+                </svg>
+              </div>
+              <div class="ms-2">
+                <p class="text-black font-semibold text-lg">Jangka Panjang</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="column">
+                <p class="font-semibold">Nilai:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+
+              <div class="column text-right">
+                <p class="font-semibold">Goal:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+            </div>
+            <div class="grid items-center justify-items-stretch mt-2">
+              <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
+            </div>
           </div>
         </div>
       </div>
