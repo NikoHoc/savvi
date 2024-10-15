@@ -8,7 +8,7 @@
 
     <style>
       body{
-        margin-bottom: 50vh;
+        margin-bottom: 15vh;
       }
 
       #scroll-section {
@@ -17,9 +17,16 @@
         scrollbar-width: thin;
       }
 
+      .chat-card-image {
+        width: 200px; 
+        aspect-ratio: 1/1; 
+        object-fit: cover; 
+        border-radius: 50%; 
+      }
+
     </style>
   </head>
-  <body>
+  <body class="">
     <!-- App Bar -->
     <div class="rounded-b-lg shadow-lg flex justify-between items-center px-6">
       <img src="image/savvi.png" class="h-12 w-auto" alt="" />
@@ -75,6 +82,7 @@
       </div>
     </section>
 
+    
 
     <section id="journal-2" class="mt-6 px-4">
       <div class="flex items-center justify-between">
@@ -82,9 +90,11 @@
         <a href="journal.html" class="text-primary underline underline-offset-2 text-md font-semibold">Tambah Baru</a>
       </div>
 
+      <!-- Essentials -->
       <div role="tablist" class="tabs tabs-lifted mt-2">
         <input type="radio" name="my_tabs_2" role="tab" class="tab font-semibold" aria-label="Essentials" />
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+          <!-- Card 1 -->
           <div class="bg-white border-2 rounded-lg shadow-xl p-4  w-full max-w-screen-md">
             <div class="flex items-center mb-4">
               <div class="bg-blue-500 rounded-full p-2">
@@ -116,7 +126,7 @@
             </div>
           </div>
 
-          <!-- Card 3 -->
+          <!-- Card 2 -->
           <div class="bg-white border-2 rounded-lg shadow-xl mt-4 p-4 w-full max-w-screen-md">
             <div class="flex items-center mb-4">
               <div class="bg-blue-500 rounded-full p-2">
@@ -149,6 +159,7 @@
           </div>
         </div>
       
+        <!-- Daily -->
         <input
           type="radio"
           name="my_tabs_2"
@@ -159,6 +170,41 @@
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
           <!-- Card 1 -->
           <div class="bg-white border-2 rounded-lg shadow-xl p-4  w-full max-w-screen-md">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-500 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
+                  <path
+                    fill="currentColor"
+                    d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
+                  />
+                </svg>
+              </div>
+              <div class="ms-2">
+                <p class="text-black font-semibold text-lg">Monthly Allowance</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="column">
+                <p class="font-semibold">Nilai:</p>
+                <p class="text-sm">Rp 50.000</p>
+              </div>
+
+              <div class="column text-right">
+                <p class="font-semibold">Pengeluaran:</p>
+                <p class="text-sm">Rp 0</p>
+              </div>
+            </div>
+            <div class="grid items-center justify-items-stretch mt-2">
+              <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Goals -->
+        <input type="radio" name="my_tabs_2" role="tab" class="tab font-semibold" aria-label="Goals" />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+          <div class="bg-white border-2 rounded-lg shadow-xl p-4 w-full max-w-screen-md">
             <div class="flex items-center mb-4">
               <div class="bg-blue-500 rounded-full p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
@@ -180,42 +226,8 @@
               </div>
 
               <div class="column text-right">
-                <p class="font-semibold">Pengeluaran:</p>
-                <p class="text-sm">Rp 0</p>
-              </div>
-            </div>
-            <div class="grid items-center justify-items-stretch mt-2">
-              <button class="btn btn-sm btn-primary text-primary-content mt-1">Kelola Journal</button>
-            </div>
-          </div>
-        </div>
-      
-        <input type="radio" name="my_tabs_2" role="tab" class="tab font-semibold" aria-label="Goals" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
-          <div class="bg-white border-2 rounded-lg shadow-xl p-4 w-full max-w-screen-md">
-            <div class="flex items-center mb-4">
-              <div class="bg-blue-500 rounded-full p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-4 w-4" viewBox="0 0 256 256">
-                  <path
-                    fill="currentColor"
-                    d="M168 128a40 40 0 1 1-40-40a40 40 0 0 1 40 40m80-64v128a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h224a8 8 0 0 1 8 8m-16 46.35A56.78 56.78 0 0 1 193.65 72H62.35A56.78 56.78 0 0 1 24 110.35v35.3A56.78 56.78 0 0 1 62.35 184h131.3A56.78 56.78 0 0 1 232 145.65Z"
-                  />
-                </svg>
-              </div>
-              <div class="ms-2">
-                <p class="text-black font-semibold text-lg">Jangka Panjang</p>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="column">
-                <p class="font-semibold">Nilai:</p>
-                <p class="text-sm">Rp 50.000</p>
-              </div>
-
-              <div class="column text-right">
                 <p class="font-semibold">Goal:</p>
-                <p class="text-sm">Rp 50.000</p>
+                <p class="text-sm">Rp 20.000.000</p>
               </div>
             </div>
             <div class="grid items-center justify-items-stretch mt-2">
@@ -225,6 +237,71 @@
         </div>
       </div>
     </section>
+
+    <section id="chat-card" class="mt-6 px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold">Top Advisors</h2>
+        <a href="chat.html" class="text-primary underline underline-offset-2 text-md font-semibold">Lihat Semua</a>
+      </div>
+
+      <div id="scroll-section" class="flex overflow-x-auto space-x-4 py-2">
+        <!-- Card 1 -->
+        <div class="scroll-item card bg-base-100 w-72 shadow-xl border flex-shrink-0">
+          <figure class="px-6 pt-6">
+            <img
+              src="image/arif.jpg"
+              alt="Shoes"
+              class="rounded-xl chat-card-image" />
+          </figure>
+          <div class="card-body items-center text-center p-4">
+            <h2 class="card-title text-md">Arif Rahman, S.E.,</h2>
+            <p >  CFA (Chartered Financial Analyst) Level II</p>
+          </div>
+          <div class="grid items-center justify-items-stretch ps-4 pe-4 pb-4">
+            <a href="chat.html" class="btn btn-sm btn-primary">Chat Sekarang</a>
+          </div>
+        </div>
+
+         <!-- Card 2 -->
+         <div class="scroll-item card bg-base-100 w-72 shadow-xl border flex-shrink-0">
+          <figure class="px-6 pt-6">
+            <img
+              src="image/nisa.jpg"
+              alt="Shoes"
+              class="rounded-xl chat-card-image" />
+          </figure>
+          <div class="card-body items-center text-center p-4">
+            <h2 class="card-title text-md">Nisa Suryani, M.M., CPA</h2>
+            <p >  CPA (Certified Public Accountant)</p>
+          </div>
+          <div class="grid items-center justify-items-stretch ps-4 pe-4 pb-4">
+            <a href="chat.html" class="btn btn-sm btn-primary">Chat Sekarang</a>
+          </div>
+        </div>
+
+         <!-- Card 3 -->
+         <div class="scroll-item card bg-base-100 w-72 shadow-xl border flex-shrink-0">
+          <figure class="px-6 pt-6">
+            <img
+              src="image/budi.jpg"
+              alt="Shoes"
+              class="rounded-xl chat-card-image" />
+          </figure>
+          <div class="card-body items-center text-center p-4">
+            <h2 class="card-title text-md">Budi Setiawan, S.M., CFP</h2>
+            <p >  CFP (Certified Financial Planner)</p>
+          </div>
+          <div class="grid items-center justify-items-stretch ps-4 pe-4 pb-4">
+            <a href="chat.html" class="btn btn-sm btn-primary">Chat Sekarang</a>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </section>
+
+  
 
     <!-- Bottom Bar -->
     <div class="btm-nav">
