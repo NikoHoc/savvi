@@ -3569,6 +3569,11 @@ details.collapse summary::-webkit-details-marker{
   height: auto;
 }
 
+.h-max{
+  height: -moz-max-content;
+  height: max-content;
+}
+
 .max-h-\[70\%\]{
   max-height: 70%;
 }
