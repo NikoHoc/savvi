@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savvi</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- App Bar -->
+
+    <div class="border fixed z-30 w-full border-16 border-gray p-2 align-items-center bg-gray-100">
+      <div class="grid grid-cols-8">
+        <div class="items-center text-center col-span-1 flex justify-center">
+          <a href="chat.html"> <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" style="width: 15px; height: 15px" /></a>
+        </div>
+        <div class="content-center text-center col-span-2">
+          <img
+            src="https://img.freepik.com/premium-vector/cute-smiley-robot-illustration-vector-icon-mascotflat-cartoon-design-style_461200-205.jpg?semt=ais_hybrid"
+            class="rounded-full border border-1 border-black"
+            style="width: 4rem; height: 4rem"
+          />
+        </div>
+        <div class="d-flex content-center col-span-5 text-center">
+          <div class="text-start">
+            <p class="font-bold">ChatBot</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-24 pb-24">
+      <div id="chat-box" class="z-0"></div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="btm-nav grid grid-cols-12 bg-gray-300">
+      <div class="md:col-span-11 sm:col-span-10 col-span-10 ms-2"><textarea type="text" placeholder="Type here" class="input input-bordered w-full" id="message"></textarea></div>
+      <div class="col-span-2 md:col-span-1">
+        <button id="send" class="rounded-full p-2 border-2 border-black ps-3 pe-3 text-xl text-center font-bold bg-orange-500 hover:bg-orange-600">
+          <i class="fa-solid fa-paper-plane" style="color: white"></i>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script/chatBot.js"></script>
+  </body>
+</html>
